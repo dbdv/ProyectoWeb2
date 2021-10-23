@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="stylesSuscripcion.css">
+    <link rel="shortcut icon" href="imagenes/dianaLogoF.png">
+    <meta name="viewport" content="widht=device-widht, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/dc8ad386a2.js" crossorigin="anonymous"></script>
+    <script defer src="menu.js"></script>
+    <script>
+        function validar(){
+            
+            //validando campo nombre y apellido
+            var nombre = document.formulario.nombre.value.trim();
+            if(!nombre || nombre.length < 7){
+                alert("Debe ingresar un nombre y apellido.");
+                return false;
+            }
+
+            //validando campo email
+            var mail = document.formulario.mail.value;
+            if(mail.length < 8){
+                alert("Debe ingresar un correo válido");
+                return false;
+            }
+
+            //validando radio de regularidad
+            var cont = 0;
+            var regularidad = document.formulario.regularidad;
+
+            for(i = 0; i < regularidad.length; i++){
+                if(regularidad[i].checked){
+                    cont++;
+                }
+            }
+
+            if(cont == 0){
+                alert("Debe elegir la regularidad");
+                return false;
+            }
+
+        }
+    </script>
+    <title>Animal Curiosity</title>
+</head>
+
+<body>
+    <section class="inicio">
+        <header class="cabecera">
+            <nav class="barra">
+                <a href="index.html"><img src="imagenes/dianaLogoF.png" class="imgLogo"></a>
+                <a class="logo enlace" href="index.html">AnimalCuriosity</a>
+                <button class="boton">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="menu-menu">
+                    <li class="submenu">
+                        <a class="menu-link enlace menu-link_activ" href="index.html">inicio</a>
+                    </li>
+                    <li class="submenu">
+                        <a class="menu-link enlace menu-link_activ" href="datoDelDia.html">dato del dia</a>
+                    </li>
+                    <li class="submenu">
+                        <a class="menu-link enlace menu-link_activ" href="animalSemana.html">animal de la semana</a>
+                    </li>
+                    <li class="submenu">
+                        <a class="menu-link enlace menu-link_activ" href="galeria.html">galería</a>
+                    </li>
+                    <li class="submenu">
+                        <a class="menu-link enlace menu-link_activ" href="suscripcion.html">newsletter</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="contenido">
+            <h2 class="sobre">Formulario de suscripción</h2>
+            <form class="formulario" name="formulario" autocomplete="on" method="POST"> <!--agregar el siguiente atributo action="validar.js" -->
+                <label for="nombre" class="etiqueta">Nombre y apellido:</label>
+                <input type="text" name="nombre" placeholder="Ingrese su nombre completo" required autofocus class="entradaTexto"><br>
+    
+                <label for="mail" class="etiqueta">Correo electrónico:</label>
+                <input type="email" name="mail" placeholder="example@mail.com" required class="entradaTexto2"><br><br>
+    
+                <label class="etiqueta">Seleccione la regularidad con la que quiere recibir el newsletter</label><br>
+    
+                <input type="radio" id="semanal" name="regularidad" class="entradaRadio">
+                <label for="regularidad">Semanal</label><br>
+    
+                <input type="radio" id="quincenal" name="regularidad" class="entradaRadio">
+                <label for="regularidad" >Quincenal</label><br>
+    
+                <input type="radio" id="mensual" name="regularidad" class="entradaRadio">
+                <label for="regularidad" >Mensual</label><br><br>
+    
+                <label for="areaTexto" class="etiqueta">Algún comentario que tenga sobre la página</label><br>
+                <textarea type="text" name="areaTexto" id="areaTexto" class="entradaArea"></textarea><br><br>
+    
+                <input type="submit" id="btSuscribirse" value="Suscribirse" onclick="validar();" class="submit">
+            </form>
+        </main>
+        <footer class="pie">
+
+        </footer>
+    </section>
+</body>
+
+</html>

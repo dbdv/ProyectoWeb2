@@ -1,0 +1,159 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body{
+    background-color: #fefefe;
+    min-height: 100%;
+}
+
+.cabecera {
+    background-color: black;
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.barra {
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+.enlace {
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 80px;
+}
+
+.imgLogo {
+    width: 85px;
+    height: 63.6px;
+    line-height: 80px;
+}
+
+.menu-menu {
+    display: flex;
+    margin-right: 20px;
+    list-style: none;
+}
+
+.submenu {
+    font-size: 16px;
+    margin: 0 10px;
+    line-height: 80px;
+    text-transform: uppercase;
+    width: max-content;
+}
+
+.menu-link {
+    padding: 8px 5px;
+    border-radius: 8px;
+}
+
+.menu-link:hover {
+    background-color: #fefefe;
+    transition: .5s;
+    color: black;
+}
+
+.boton {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 60 px;
+    padding: 0 20 px;
+    line-height: 60px;
+    display: none;
+    cursor: pointer;
+}
+
+.contenido {
+    margin-top: 90px;
+    background-color: #fefefe;
+}
+
+.imagen {
+    display: block;
+    margin:40px auto;
+}
+
+@media (max-width: 768px){
+    .cabecera {
+        height: 60px;
+    }
+    
+    .logo {
+        font-size: 25px;
+        padding: 0 20px;
+        line-height: 60px;
+    }
+
+    .imgLogo {
+        width: 70.84px;
+        height: 53px;
+        line-height: 60px;
+    }
+    
+    .menu-menu {
+        flex-direction: column;
+        align-items: center;
+        margin-right: 0;
+        position: fixed;
+        left: 100%;
+        transition: left 0.3s;
+        top: 60px;
+        width: 100%;
+        height: calc(100%-60px);
+        overflow-y: auto;
+        padding: 20px 0;
+        background-color: darkcyan;
+    }
+    
+    .submenu {
+        line-height: 60px;
+    }
+    
+    
+    .menu-link:hover, .menu-link_activo {
+        background: none;
+        color: cornflowerblue;
+    }
+    
+    .boton {
+        margin-right: 10px;
+        display: block;
+        font-size: 35px;
+    }
+    
+    .menu-menu_visible {
+        left: 0;
+    }
+
+    .contenido {
+        margin-top: 70px;
+    }
+
+    .imagen {
+        display: block;
+        margin: 20px auto;
+        width: 225px;
+        height: 225px;
+    }
+}
