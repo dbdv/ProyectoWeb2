@@ -15,7 +15,7 @@ body{
 }
 
 .cabecera {
-    background-image: linear-gradient(-45deg, black 55%,#a9bf5a 50%);
+    background-image: linear-gradient(-45deg, black 53.5%,#a9bf5a 46.5%);
     height: 80px;
     position: fixed;
     width: 100%;
@@ -25,7 +25,7 @@ body{
 
 .barra {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between ;
 
     max-width: 992px;
     margin: 0 auto;
@@ -117,10 +117,9 @@ body{
     
     .logo {
         font-size: 25px;
-        padding: 0;
+        padding: 0 20px;
         line-height: 60px;
-        color: black;
-        margin: 0;
+        color: black;;
     }
 
     .imgLogo {
