@@ -14,7 +14,7 @@ body{
 }
 
 .cabecera {
-    background-image: linear-gradient(-45deg, black 55%,#a9bf5a 50%);
+    background-image: linear-gradient(90deg,#a9bf5a 45%, black 45%);
     height: 80px;
     position: fixed;
     width: 100%;
@@ -47,6 +47,7 @@ body{
     width: 85px;
     height: 63.6px;
     line-height: 80px;
+    margin-top: 5px;
 }
 
 .menu-menu {
@@ -91,15 +92,16 @@ body{
 }
 
 .sobre {
-    margin: 10px auto;
-    font-family: cursive;
+    margin: 0;
+    padding-top: 10px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
 .formulario {
     border: solid 4px black;
     /*background-color: #dedede;*/
-    background-image: linear-gradient(0deg, black 53.5%,#a9bf5a 46.5%);
+    background-color: #a9bf5a;
     width: 640px;
     height: 370px;
     margin: 20px auto;
@@ -203,7 +205,7 @@ body{
     .formulario {
         border: solid 2px black;
         /*background-color: #dedede;*/
-        background-image: linear-gradient(0deg, #a9bf5a 10%, #dedede 70%);
+        background-color: #a9bf5a;
         width: 320px;
         height: 440px;
         margin: 10px auto;
