@@ -9,6 +9,45 @@
     <script src="https://kit.fontawesome.com/dc8ad386a2.js" crossorigin="anonymous"></script>
     <script defer src="menu.js"></script>
     <title>Animal Curiosity</title>
+
+    <script type="text/javascript">
+    	
+    	var imagenes = document.getElementsByClassName("imagen");
+    	var i = 0;
+
+    	function previa(){
+    		
+    		if(i == 0){
+
+    			imagenes[i].classList.toggle("oculta");
+    			i = 9;
+    			imagenes[i].classList.toggle("oculta");
+    		}else{
+
+    			imagenes[i].classList.toggle("oculta");
+    			--i;
+    			imagenes[i].classList.toggle("oculta");
+    		}
+
+    	}
+
+    	function siguiente(){
+
+    		if(i == 9){
+
+    			imagenes[i].classList.toggle("oculta");
+    			i = 0;
+    			imagenes[i].classList.toggle("oculta");
+
+    		}else{
+
+    			imagenes[i].classList.toggle("oculta");
+    			++i;
+    			imagenes[i].classList.toggle("oculta");
+    		}
+    	}
+
+    </script>
 </head>
 
 <body>
@@ -40,16 +79,22 @@
             </nav>
         </header>
         <main class="contenido">
+
+        		
                 <img src="galeria/1.jpg" alt="" class="imagen" id="img1">
-                <img src="galeria/2.jpg" alt="" class="imagen" id="img2">
-                <img src="galeria/3.jpg" alt="" class="imagen" id="img3">
-                <img src="galeria/4.jpg" alt="" class="imagen" id="img4">
-                <img src="galeria/5.jpg" alt="" class="imagen" id="img5">
-                <img src="galeria/6.jpg" alt="" class="imagen" id="img6">
-                <img src="galeria/7.jpg" alt="" class="imagen" id="img7">
-                <img src="" alt="" class="imagen" id="img8">
-                <img src="" alt="" class="imagen" id="img9">
-                <img src="" alt="" class="imagen" id="img10">
+                <img src="galeria/2.jpg" alt="" class="imagen oculta" id="img2">
+                <img src="galeria/3.jpg" alt="" class="imagen oculta" id="img3">
+                <img src="galeria/4.jpg" alt="" class="imagen oculta" id="img4">
+                <img src="galeria/5.jpg" alt="" class="imagen oculta" id="img5">
+                <img src="galeria/6.jpg" alt="" class="imagen oculta" id="img6">
+                <img src="galeria/7.jpg" alt="" class="imagen oculta" id="img7">
+                <img src="" alt="" class="imagen oculta" id="img8">
+                <img src="" alt="" class="imagen oculta" id="img9">
+                <img src="" alt="" class="imagen oculta" id="img10">
+
+                <button class="button" onclick="previa()">|<<<<|</button>
+        		<button class="button" onclick="siguiente()">|>>>>|</button>
+                
 <!--
                 <ul class="botones">
                     <li><a href="" target="img1">1</a></li>

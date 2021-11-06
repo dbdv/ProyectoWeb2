@@ -75,15 +75,9 @@ body{
     color: black;
 }
 
-.boton {
-    color: white;
-    background: none;
-    border: none;
-    font-size: 60 px;
-    padding: 0 20 px;
-    line-height: 60px;
-    display: none;
-    cursor: pointer;
+.button {
+    margin: 0 auto;
+    text-align: center;
 }
 
 .contenido {
@@ -98,6 +92,10 @@ body{
     width: 640px;
     height: 640px;
     opacity: 1;
+}
+
+.oculta {
+    display: none;
 }
 
 
