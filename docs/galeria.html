@@ -10,44 +10,7 @@
     <script defer src="menu.js"></script>
     <title>Animal Curiosity</title>
 
-    <script type="text/javascript">
-    	
-    	var imagenes = document.getElementsByClassName("imagen");
-    	var i = 0;
-
-    	function previa(){
-    		
-    		if(i == 0){
-
-    			imagenes[i].classList.toggle("oculta");
-    			i = 9;
-    			imagenes[i].classList.toggle("oculta");
-    		}else{
-
-    			imagenes[i].classList.toggle("oculta");
-    			--i;
-    			imagenes[i].classList.toggle("oculta");
-    		}
-
-    	}
-
-    	function siguiente(){
-
-    		if(i == 9){
-
-    			imagenes[i].classList.toggle("oculta");
-    			i = 0;
-    			imagenes[i].classList.toggle("oculta");
-
-    		}else{
-
-    			imagenes[i].classList.toggle("oculta");
-    			++i;
-    			imagenes[i].classList.toggle("oculta");
-    		}
-    	}
-
-    </script>
+    <script type="text/javascript" src="galeria.js"></script>
 </head>
 
 <body>
@@ -88,13 +51,14 @@
                 <img src="galeria/5.jpg" alt="" class="imagen oculta" id="img5">
                 <img src="galeria/6.jpg" alt="" class="imagen oculta" id="img6">
                 <img src="galeria/7.jpg" alt="" class="imagen oculta" id="img7">
-                <img src="" alt="" class="imagen oculta" id="img8">
-                <img src="" alt="" class="imagen oculta" id="img9">
-                <img src="" alt="" class="imagen oculta" id="img10">
+                <img src="galeria/8.jpg" alt="" class="imagen oculta" id="img8">
+                <img src="galeria/9.jpg" alt="" class="imagen oculta" id="img9">
+                <img src="galeria/10.jpg" alt="" class="imagen oculta" id="img10">
 
-                <button class="button" onclick="previa()">|<<<<|</button>
-        		<button class="button" onclick="siguiente()">|>>>>|</button>
-                
+                <div class="botones">
+                <button class="button" onclick="previa()"><i class="fas fa-arrow-left"></i></button>
+        		<button class="button" onclick="siguiente()"><i class="fas fa-arrow-right"></i></button>
+            </div>
 <!--
                 <ul class="botones">
                     <li><a href="" target="img1">1</a></li>
@@ -111,7 +75,7 @@
 -->
             </main>
         <footer class="pie">
-
+            Contacto: <a href="mailto:bustillosdaniel4@gmail.com" class="mail">bustillosdaniel4@gmail.com</a>
         </footer>
     </section>
 </body>

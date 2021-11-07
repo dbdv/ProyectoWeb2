@@ -38,7 +38,7 @@ body{
 .logo {
     font-size: 30px;
     font-weight: bold;
-    padding: 0 40px;
+    padding: 0 20px;
     line-height: 80px;
     color: black;
 }
@@ -89,13 +89,48 @@ body{
     display: block;
     margin:40px auto;
     padding: 5px;
-    width: 640px;
-    height: 640px;
+    max-width: 100%;
+    height: auto;
     opacity: 1;
+    
 }
 
 .oculta {
     display: none;
+}
+
+.boton {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 60 px;
+    padding: 0 20 px;
+    line-height: 60px;
+    display: none;
+    cursor: pointer;
+}
+
+.button {
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.botones {
+    text-align: center;
+}
+
+.pie {
+    text-align: center;
+}
+
+.mail {
+    color: gray;
+    text-decoration: none;
+}
+
+.mail:hover {
+    color: tomato;
 }
 
 

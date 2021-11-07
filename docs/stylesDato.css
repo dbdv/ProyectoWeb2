@@ -38,7 +38,7 @@ body{
 .logo {
     font-size: 30px;
     font-weight: bold;
-    padding: 0 40px;
+    padding: 0 20px;
     line-height: 80px;
     color: black;
 }
@@ -106,6 +106,19 @@ body{
 .hormiga {
     display: block;
     margin: 40px auto;
+}
+
+.pie {
+    text-align: center;
+}
+
+.mail {
+    color: gray;
+    text-decoration: none;
+}
+
+.mail:hover {
+    color: tomato;
 }
 
 @media (max-width: 768px){

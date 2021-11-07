@@ -40,7 +40,7 @@ body{
     display: inline-block;
     font-size: 30px;
     font-weight: bold;
-    padding: 0 40px;
+    padding: 0 20px;
     line-height: 80px;
     color: black;
 }
@@ -92,6 +92,7 @@ body{
     margin-top: 90px;
     background-color: #fefefe;
     /*background-image: linear-gradient(90deg, #e3ddd9 50%,#a9bf5a 50%);*/
+    display: inline;
 }
 
 .sobre {
@@ -102,13 +103,27 @@ body{
 }
 
 .parrafo {
-    margin: 0 3%;
+    margin: 80px 3%;
     text-align: left;
 }
 
 .imgHola {
     display: block;
     margin: 30px auto;
+}
+
+.pie {
+    text-align: center;
+    bottom: 0;
+}
+
+.mail {
+    color: gray;
+    text-decoration: none;
+}
+
+.mail:hover {
+    color: tomato;
 }
 
 @media (max-width: 768px){
