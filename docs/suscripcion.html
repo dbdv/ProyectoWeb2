@@ -3,24 +3,27 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="stylesSuscripcion.css">
     <link rel="shortcut icon" href="imagenes/dianaLogoF.png">
     <meta name="viewport" content="widht=device-widht, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/dc8ad386a2.js" crossorigin="anonymous"></script>
     <script defer src="menu.js"></script>
     <script>
-        function validar(){
-            
+        function validar() {
+
             //validando campo nombre y apellido
             var nombre = document.formulario.nombre.value.trim();
-            if(!nombre || nombre.length < 7){
+            if (!nombre || nombre.length < 7) {
                 alert("Debe ingresar un nombre y apellido.");
                 return false;
             }
 
             //validando campo email
             var mail = document.formulario.mail.value;
-            if(mail.length < 8){
+            if (mail.length < 8) {
                 alert("Debe ingresar un correo válido");
                 return false;
             }
@@ -29,13 +32,13 @@
             var cont = 0;
             var regularidad = document.formulario.regularidad;
 
-            for(i = 0; i < regularidad.length; i++){
-                if(regularidad[i].checked){
+            for (i = 0; i < regularidad.length; i++) {
+                if (regularidad[i].checked) {
                     cont++;
                 }
             }
 
-            if(cont == 0){
+            if (cont == 0) {
                 alert("Debe elegir la regularidad");
                 return false;
             }
@@ -75,27 +78,29 @@
         </header>
         <main class="contenido">
             <h2 class="sobre">Formulario de suscripción</h2>
-            <form class="formulario" name="formulario" autocomplete="on" method="POST"> <!--agregar el siguiente atributo action="validar.js" -->
+            <form class="formulario" name="formulario" autocomplete="on" method="POST">
+                <!--agregar el siguiente atributo action="validar.js" -->
                 <label for="nombre" class="etiqueta">Nombre y apellido:</label>
-                <input type="text" name="nombre" placeholder="Ingrese su nombre completo" required autofocus class="entradaTexto"><br>
-    
+                <input type="text" name="nombre" placeholder="Ingrese su nombre completo" required autofocus
+                    class="entradaTexto"><br>
+
                 <label for="mail" class="etiqueta">Correo electrónico:</label>
                 <input type="email" name="mail" placeholder="example@mail.com" required class="entradaTexto2"><br><br>
-    
+
                 <label class="etiqueta">Seleccione la regularidad con la que quiere recibir el newsletter</label><br>
-    
+
                 <input type="radio" id="semanal" name="regularidad" class="entradaRadio">
                 <label for="regularidad">Semanal</label><br>
-    
+
                 <input type="radio" id="quincenal" name="regularidad" class="entradaRadio">
-                <label for="regularidad" >Quincenal</label><br>
-    
+                <label for="regularidad">Quincenal</label><br>
+
                 <input type="radio" id="mensual" name="regularidad" class="entradaRadio">
-                <label for="regularidad" >Mensual</label><br><br>
-    
+                <label for="regularidad">Mensual</label><br><br>
+
                 <label for="areaTexto" class="etiqueta">Algún comentario que tenga sobre la página</label><br>
                 <textarea type="text" name="areaTexto" id="areaTexto" class="entradaArea"></textarea><br><br>
-    
+
                 <input type="submit" id="btSuscribirse" value="Suscribirse" onclick="validar();" class="submit">
             </form>
         </main>

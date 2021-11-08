@@ -6,15 +6,16 @@
 
 html {
     height: 100%;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body{
-    background-color: #fefefe;
+    background-color: #efefef;
     min-height: 100%;
 }
 
 .cabecera {
-    background-image: linear-gradient(90deg,#a9bf5a 45%, black 45%);
+    background-image: linear-gradient(90deg,#a9bf5a 43%, black 43%);
     height: 80px;
     position: fixed;
     width: 100%;
@@ -88,7 +89,7 @@ body{
 
 .contenido {
     margin-top: 90px;
-    background-color: #fefefe;
+    background-color: #efefef;
 }
 
 .sobre {
@@ -113,12 +114,19 @@ body{
 }
 
 .mail {
+    transition: color 0.3s ease;
     color: gray;
     text-decoration: none;
 }
 
 .mail:hover {
-    color: tomato;
+    color: cornflowerblue;
+}
+
+@media (max-width: 1700px){
+    .cabecera {
+        background-image: linear-gradient(90deg,#a9bf5a 40%, black 40%);
+    }
 }
 
 @media (max-width: 768px){
