@@ -11,40 +11,7 @@
     <meta name="viewport" content="widht=device-widht, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/dc8ad386a2.js" crossorigin="anonymous"></script>
     <script defer src="menu.js"></script>
-    <script>
-        function validar() {
-
-            //validando campo nombre y apellido
-            var nombre = document.formulario.nombre.value.trim();
-            if (!nombre || nombre.length < 7) {
-                alert("Debe ingresar un nombre y apellido.");
-                return false;
-            }
-
-            //validando campo email
-            var mail = document.formulario.mail.value;
-            if (mail.length < 8) {
-                alert("Debe ingresar un correo válido");
-                return false;
-            }
-
-            //validando radio de regularidad
-            var cont = 0;
-            var regularidad = document.formulario.regularidad;
-
-            for (i = 0; i < regularidad.length; i++) {
-                if (regularidad[i].checked) {
-                    cont++;
-                }
-            }
-
-            if (cont == 0) {
-                alert("Debe elegir la regularidad");
-                return false;
-            }
-
-        }
-    </script>
+    <script src="validarForm.js"></script>
     <title>Animal Curiosity</title>
 </head>
 
@@ -85,7 +52,7 @@
                     class="entradaTexto"><br>
 
                 <label for="mail" class="etiqueta">Correo electrónico:</label>
-                <input type="email" name="mail" placeholder="example@mail.com" required class="entradaTexto2"><br><br>
+                <input type="email" name="mail" placeholder="example@mail.com" required class="entradaTexto"><br><br>
 
                 <label class="etiqueta">Seleccione la regularidad con la que quiere recibir el newsletter</label><br>
 
@@ -101,7 +68,7 @@
                 <label for="areaTexto" class="etiqueta">Algún comentario que tenga sobre la página</label><br>
                 <textarea type="text" name="areaTexto" id="areaTexto" class="entradaArea"></textarea><br><br>
 
-                <input type="submit" id="btSuscribirse" value="Suscribirse" onclick="validar();" class="submit">
+                <input type="submit" id="btSuscribirse" value="Suscribirse" onclick="return validar();" class="submit">
             </form>
         </main>
         <footer class="pie">
