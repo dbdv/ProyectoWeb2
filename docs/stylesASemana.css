@@ -110,8 +110,12 @@ body{
     margin: 20px auto;
 }
 
+
 .pie {
     text-align: center;
+    transition: color 0.3s ease;
+    color: gray;
+    text-decoration: none;
 }
 
 .mail {
