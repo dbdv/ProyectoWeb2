@@ -29,4 +29,6 @@ function validar() {
         alert("Debe elegir la regularidad");
         return false;
     }
+    
+    return true;
 }
